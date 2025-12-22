@@ -1,0 +1,501 @@
+/*
+ * ملف أنماط CSS لموقع WireX
+ *
+ * يستخدم هذا الملف لتنسيق الصفحات مع دعم اللغة العربية واتجاه الكتابة من اليمين إلى اليسار.
+ */
+
+:root {
+  /* ألوان أساسية */
+  --primary-color: #0070c9; /* أزرق WireX */
+  --secondary-color: #006494; /* أزرق غامق للخلفيات */
+  --accent-color: #f4b400; /* لون مائل للذهبي للعناصر المميزة */
+  --text-color: #333;
+  --background-color: #f9f9f9;
+  --light-bg: #ffffff;
+  --border-radius: 8px;
+  --transition: 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Tajawal', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius);
+}
+
+/* حاوية عامة */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* رأس الموقع */
+.site-header {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* شعار WireX في رأس الموقع */
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.site-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 0.25rem;
+  border-radius: 0; /* لا حاجة لتطبيق نصف القطر على الشعار */
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.logo .tagline {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #e2e8f0;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background-color: var(--primary-color);
+}
+
+/* قسم البطل */
+.hero {
+  /* إعادة تصميم قسم البطل ليكون عموديًا ومركزيًا بعد إزالة صورة البطل */
+  display: block;
+  background-color: var(--light-bg);
+  padding: 2rem 0;
+  border-bottom: 4px solid var(--primary-color);
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-image {
+  flex: 1 1 50%;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* خدمات */
+.services {
+  background-color: var(--background-color);
+  padding: 3rem 0;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.section-desc {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-category {
+  background-color: var(--light-bg);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.service-category:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-category h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.service-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-category li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  line-height: 1.4;
+}
+
+.service-category li i {
+  margin-left: 0.5rem;
+  color: var(--primary-color);
+}
+
+/* قسم الاتصال */
+.contact {
+  background-color: var(--light-bg);
+  padding: 3rem 0;
+  border-top: 4px solid var(--primary-color);
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-info {
+  flex: 1 1 40%;
+}
+
+.contact-info h2 {
+  margin-top: 0;
+  color: var(--secondary-color);
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+.contact-info .phone {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.qr-code {
+  width: 200px;
+  height: 200px;
+  margin-top: 1rem;
+}
+
+.contact-form {
+  flex: 1 1 50%;
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form h3 {
+  margin-top: 0;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+}
+
+.form-note {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+/* أسفل الصفحة */
+.site-footer {
+  background-color: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.order-page .order-form {
+  background-color: var(--light-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.order-page .checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.order-page .checkbox-group label {
+  background-color: var(--background-color);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.order-page .checkbox-group input {
+  margin-left: 0.5rem;
+}
+
+.order-page fieldset {
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+.order-page fieldset legend {
+  padding: 0 0.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* تنسيق الأسعار القديمة والجديدة */
+/* تنسيق الأسعار القديمة والجديدة */
+.price-old {
+  /* تحديد موضع نسبي للسماح بإضافة خط مائل عبر ::after */
+  position: relative;
+  color: #888;
+  font-style: italic;
+  margin-right: 0.25rem;
+}
+
+/* إضافة خط شطب مائل للسعر القديم */
+.price-old::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid currentColor;
+  /* تدوير الخط ليصبح مائلاً بحيث لا يغطي الأرقام بالكامل */
+  transform: rotate(-20deg);
+  transform-origin: center;
+}
+
+.price-new {
+  color: var(--accent-color);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+/* ملاحظة للوحدة مثل (سعر المتر) */
+.unit-note {
+  font-size: 0.75rem;
+  color: var(--secondary-color);
+  margin-right: 0.25rem;
+}
+
+/* ملاحظة التخطيط المجاني */
+.free-plan-note {
+  font-size: 0.95rem;
+  color: var(--primary-color);
+  margin: 0.5rem 0;
+}
+
+/* عرض المناطق المخدومة */
+.service-regions {
+  font-size: 0.95rem;
+  color: var(--secondary-color);
+  margin: 0.25rem 0 0.5rem 0;
+}
+
+/* أيقونات القسم البطل لإضافة الحيوية */
+.hero-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* تصميم شكل الدوائر التي تحتوي على الأيقونات مباشرة */
+.icon-circle {
+  background-color: var(--primary-color);
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  transition: var(--transition);
+}
+.icon-circle:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ضبط حجم الأيقونات داخل الدوائر */
+.icon-circle img {
+  width: 34px;
+  height: 34px;
+  display: block;
+}
+
+/* أيقونة كبيرة للخدمة في قسم الخدمات */
+.service-icon-large {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto 0.5rem;
+  /* تأكد من احتواء الأيقونة بشكل كامل داخل المربع دون تشويه */
+  object-fit: contain;
+}
+
+/* ملاحظة أنظمة البيت الذكية أسفل قسم الخدمات */
+.smart-home-note {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+.smart-home-note .small-note {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* أيقونات الخدمات في صفحة الطلب */
+.service-icon {
+  width: 24px;
+  height: 24px;
+  /* تأكد من أن الأيقونة الصغيرة تحتفظ بنسبة الأبعاد دون قص */
+  object-fit: contain;
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .hero {
+    flex-direction: column;
+  }
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-info,
+  .contact-form {
+    flex: 1 1 100%;
+  }
+}

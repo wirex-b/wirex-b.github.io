@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+  صفحة طلب الخدمة
+  يتم استخدام هذه الصفحة لسلة الطلبات بحيث يختار العميل الخدمات المطلوبة 
+  ويملأ بيانات الاتصال والموقع. عند الضغط على زر الإرسال يتم إرسال الطلب 
+  عبر خدمة Formspree إلى بريدك الإلكتروني.
+-->
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF‑8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>طلب خدمة – WireX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-XxQxD9wreklftx9NvW7Xu4hD6lCJ5TND9ZRixMX+fKZVkdyifV+WLB6ADm3kQ7eBj6WKuXnjDVx8DawePYVIsw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-container">
+        <div class="logo">
+          <!-- شعار WireX المخصص -->
+          <img src="assets/wirex_logo_white.png" alt="WireX Logo" class="site-logo" />
+          <p class="tagline">خبراء الشبكات والإنترنت</p>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html#services">الخدمات</a></li>
+            <li><a href="order.html" class="active">طلب خدمة</a></li>
+            <li><a href="index.html#contact">تواصل معنا</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="order-page">
+      <div class="container">
+        <h2 class="section-title">طلب خدمة</h2>
+        <p class="section-desc">الرجاء اختيار الخدمات المطلوبة وملء بياناتك لتواصلنا معك.</p>
+        <!-- نموذج طلب الخدمة: غيّر action إلى معرف نموذجك في Formspree -->
+        <form action="https://formspree.io/f/your_form_id" method="POST" class="order-form">
+          <fieldset class="form-section">
+            <legend>اختر الخدمات</legend>
+            <!-- التخطيط والحلول مجانية مع الخدمة -->
+            <p class="free-plan-note">التخطيط والحلول مجانية مع الخدمة</p>
+            <div class="checkbox-group">
+              <!-- الخدمة الأولى: التخطيط وإيجاد الحلول ورسم خطة واضحة (خدمة مجانية) -->
+              <label>
+                <input type="checkbox" name="الخدمات[]" value="التخطيط وإيجاد الحلول ورسم خطة واضحة (خدمة مجانية)" />
+                <img src="assets/service_plan.png" alt="" class="service-icon" />
+                التخطيط وإيجاد الحلول ورسم خطة واضحة (خدمة مجانية)
+              </label>
+              <!-- الخدمة الثانية: تمديد الكوابل وتركيب رؤوس إيثرنت (RJ45) -->
+              <label>
+                <input type="checkbox" name="الخدمات[]" value="تمديد الكوابل وتركيب رؤوس إيثرنت (RJ45)" />
+                <img src="assets/service_cable.png" alt="" class="service-icon" />
+                تمديد الكوابل وتركيب رؤوس إيثرنت (RJ45)
+              </label>
+              <!-- الخدمة الثالثة: تهيئة المودم أو الراوترات القديمة وتحويلها إلى نقاط توزيع -->
+              <label>
+                <input type="checkbox" name="الخدمات[]" value="تهيئة المودم أو الراوترات القديمة وتحويلها إلى نقاط توزيع" />
+                <img src="assets/service_router.png" alt="" class="service-icon" />
+                تهيئة المودم أو الراوترات القديمة وتحويلها إلى نقاط توزيع
+              </label>
+              <!-- الخدمة الرابعة: تركيب المخارج الجدارية وصيانتها -->
+              <label>
+                <input type="checkbox" name="الخدمات[]" value="تركيب المخارج الجدارية وصيانتها" />
+                <img src="assets/service_port.png" alt="" class="service-icon" />
+                تركيب المخارج الجدارية وصيانتها
+              </label>
+            </div>
+            <p class="smart-home-note">
+              أنظمة البيت الذكية<br />
+              <span class="small-note">اسأل عنها لمعرفة المزيد</span>
+            </p>
+          </fieldset>
+          <fieldset class="form-section">
+            <legend>بياناتك الشخصية</legend>
+            <div class="form-group">
+              <label for="fullName">الاسم الكامل</label>
+              <input type="text" id="fullName" name="الاسم" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">رقم الجوال (واتساب)</label>
+              <input type="tel" id="phone" name="الجوال" pattern="[0-9]{10}" placeholder="مثال: 0501234567" required />
+            </div>
+            <div class="form-group">
+              <label for="city">المدينة</label>
+              <select id="city" name="المدينة" required>
+                <option value="">اختر المدينة</option>
+                <option value="الدمام">الدمام</option>
+                <option value="الخبر">الخبر</option>
+                <option value="القطيف">القطيف</option>
+                <option value="الظهران">الظهران</option>
+                <option value="أخرى">أخرى</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="district">الحي أو المنطقة</label>
+              <input type="text" id="district" name="الحي/المنطقة" required />
+            </div>
+            <div class="form-group">
+              <label for="placeType">نوع المكان</label>
+              <select id="placeType" name="نوع المكان" required>
+                <option value="">اختر نوع المكان</option>
+                <option value="شقة">شقة</option>
+                <option value="فيلا">فيلا</option>
+                <option value="مكتب">مكتب</option>
+                <option value="محل تجاري">محل تجاري</option>
+                <option value="أخرى">أخرى</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="notes">ملاحظات إضافية</label>
+              <textarea id="notes" name="ملاحظات" rows="3" placeholder="أضف أي تفاصيل تهمنا (اختياري)"></textarea>
+            </div>
+          </fieldset>
+          <button type="submit" class="btn btn-primary">إرسال الطلب</button>
+        </form>
+        <p class="form-note">
+          سيتم إرسال طلبك إلى بريدنا وسيتم التواصل معك في أقرب وقت.
+          تأكد من إدخال بيانات صحيحة ليتم التواصل معك بسهولة.
+        </p>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2025 WireX. جميع الحقوق محفوظة.</p>
+      </div>
+    </footer>
+  </body>
+</html>

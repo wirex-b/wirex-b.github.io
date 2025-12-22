@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+  WireX خدمة الخدمات الشبكية
+
+  هذه الصفحة هي الصفحة الرئيسية للموقع الإلكتروني.  
+  الغرض منها تعريف الزائر بالخدمات المتاحة وتوجيهه إلى صفحة طلب الخدمة.  
+  تم بناء الموقع باللغة العربية وباتجاه يمين‑إلى‑يسار.  
+  يمكنكم تخصيص النصوص والصور كما تشاؤون.  
+-->
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF‑8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WireX – خدمات الشبكات والإنترنت</title>
+    <!-- الخطوط العربية من Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- أيقونات font-awesome لاستخدام الأيقونات الجاهزة -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-XxQxD9wreklftx9NvW7Xu4hD6lCJ5TND9ZRixMX+fKZVkdyifV+WLB6ADm3kQ7eBj6WKuXnjDVx8DawePYVIsw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- شريط العنوان والتنقل -->
+    <header class="site-header">
+      <div class="container header-container">
+        <div class="logo">
+          <!-- شعار WireX المخصص. تم تعيين خلفية شفافة وتلوين العناصر باللون الأساسي للموقع -->
+          <img src="assets/wirex_logo_white.png" alt="WireX Logo" class="site-logo" />
+          <p class="tagline">خبراء الشبكات والإنترنت</p>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#services">الخدمات</a></li>
+            <li><a href="order.html">طلب خدمة</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- قسم البطل (الواجهة الرئيسية) -->
+    <section class="hero">
+      <div class="container hero-content">
+        <h2>امتلك شبكة منزلية متكاملة</h2>
+        <p>
+          نقدم حلولاً متكاملة لتمديد كوابل الإنترنت، إعداد نقاط التوزيع، تركيب مخارج
+          الشبكة الجدارية، وأنظمة المنزل الذكي. خدماتنا تشمل كل ما تحتاجه لضمان
+          اتصال سريع وآمن في منزلك أو مكتبك.
+        </p>
+        <!-- ملاحظة: التخطيط والحلول مجانية ضمن الخدمة -->
+        <p class="free-plan-note">التخطيط والحلول مجانية مع الخدمة</p>
+        <!-- عرض المناطق التي تتوفر فيها الخدمات -->
+        <p class="service-regions">نخدم المناطق التالية: الدمام، الخبر، الظهران، القطيف وما حولها.</p>
+        <div class="hero-icons">
+          <!-- أيقونات الخدمات مصممة بنفس طابع الشعار (لون أبيض على خلفية شفافة) -->
+          <span class="icon-circle">
+            <img src="assets/hero_globe.png" alt="الإنترنت والشبكات" />
+          </span>
+          <span class="icon-circle">
+            <img src="assets/hero_plug.png" alt="الأسلاك والطاقة" />
+          </span>
+          <span class="icon-circle">
+            <img src="assets/hero_bars.png" alt="قوة الإشارة" />
+          </span>
+          <span class="icon-circle">
+            <img src="assets/hero_dish.png" alt="نقاط التوزيع والراوترات" />
+          </span>
+          <span class="icon-circle">
+            <img src="assets/hero_house.png" alt="الأنظمة الذكية" />
+          </span>
+        </div>
+        <a href="order.html" class="btn btn-primary">اطلب الخدمة الآن</a>
+      </div>
+      <!-- تمت إزالة الصورة الإعلانية لإلغاء التخفيض -->
+      <!-- يمكن إضافة صورة بديلة هنا إذا لزم الأمر -->
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2 class="section-title">خدماتنا</h2>
+        <p class="section-desc">
+          نقدم مجموعة متنوعة من الخدمات في أربع فئات رئيسية. اختر الخدمة التي
+          تناسب احتياجاتك.
+        </p>
+        <div class="services-grid">
+          <!-- الخدمة الأولى: التخطيط وإيجاد الحلول ورسم خطة واضحة (خدمة مجانية) -->
+          <div class="service-category">
+            <img src="assets/service_plan.png" alt="التخطيط وإيجاد الحلول" class="service-icon-large" />
+            <h3>التخطيط وإيجاد الحلول</h3>
+            <p>خدمة مجانية لتقييم احتياجاتك، رسم خطة واضحة وتوفير أفضل الحلول للشبكة.</p>
+          </div>
+          <!-- الخدمة الثانية: تمديد الكوابل وتركيب رؤوس إيثرنت (RJ45) -->
+          <div class="service-category">
+            <img src="assets/service_cable.png" alt="تمديد الكوابل وتركيب رؤوس إيثرنت" class="service-icon-large" />
+            <h3>تمديد الكوابل وتركيب رؤوس إيثرنت</h3>
+            <p>تمديد كيابل الشبكة وتركيب رؤوس RJ45 لتحسين جودة الاتصال.</p>
+          </div>
+          <!-- الخدمة الثالثة: تهيئة المودم أو الراوترات القديمة وتحويلها إلى نقاط توزيع -->
+          <div class="service-category">
+            <img src="assets/service_router.png" alt="تهيئة المودم والراوترات" class="service-icon-large" />
+            <h3>تهيئة المودم أو الراوترات القديمة</h3>
+            <p>تحويل المودم أو الراوتر القديم إلى نقطة توزيع آمنة وفعّالة.</p>
+          </div>
+          <!-- الخدمة الرابعة: تركيب المخارج الجدارية وصيانتها -->
+          <div class="service-category">
+            <img src="assets/service_port.png" alt="تركيب المخارج الجدارية وصيانتها" class="service-icon-large" />
+            <h3>تركيب المخارج الجدارية وصيانتها</h3>
+            <p>تركيب وصيانة مخارج الشبكة الجدارية لضمان أداء طويل الأمد.</p>
+          </div>
+        </div>
+        <div class="smart-home-note">
+          <strong>أنظمة البيت الذكية</strong><br />
+          <span class="small-note">اسأل عنها لمعرفة المزيد</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم الاتصال -->
+    <section id="contact" class="contact">
+      <div class="container contact-container">
+        <div class="contact-info">
+          <h2>تواصل معنا</h2>
+          <p>يمكنك التواصل معنا مباشرة عبر تطبيق واتساب أو الهاتف:</p>
+          <p class="phone"><i class="fa-brands fa-whatsapp"></i> 0505781824</p>
+          <p>
+            أو امسح رمز الاستجابة السريعة التالي للتواصل السريع:
+          </p>
+          <img src="assets/whatsapp_qr.jpeg" alt="رمز واتساب" class="qr-code" />
+        </div>
+        <div class="contact-form">
+          <h3>أو أرسل لنا رسالة عبر النموذج</h3>
+          <!-- يمكنكم تعديل action بإضافة معرف النموذج من Formspree -->
+          <form action="https://formspree.io/f/your_form_id" method="POST">
+            <div class="form-group">
+              <label for="name">الاسم الكامل</label>
+              <input type="text" id="name" name="الاسم" required />
+            </div>
+            <div class="form-group">
+              <label for="email">البريد الإلكتروني</label>
+              <input type="email" id="email" name="البريد الإلكتروني" required />
+            </div>
+            <div class="form-group">
+              <label for="message">رسالتك</label>
+              <textarea id="message" name="الرسالة" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary">إرسال</button>
+          </form>
+          <p class="form-note">
+            ملاحظة: يتم معالجة رسائلك عبر خدمة Formspree. تفضل بزيارة لوحة
+            التحكم لديهم لرؤية الرسائل المرسلة.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- أسفل الصفحة -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          © 2025 WireX. جميع الحقوق محفوظة.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
