@@ -6,7 +6,6 @@
   <title>طلب خدمة – WireX</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -16,133 +15,61 @@
   <div class="container header-container">
     <div class="logo">
       <a href="index.html">
-        <img src="assets/wirex_logo_white.png" alt="WireX Logo" class="site-logo" />
+        <img src="assets/wirex_logo_white.png" class="site-logo" />
       </a>
       <p class="tagline">خبراء الشبكات والإنترنت</p>
     </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html#services">الخدمات</a></li>
-        <li><a href="order.html" class="active">طلب خدمة</a></li>
-        <li><a href="index.html#contact">تواصل معنا</a></li>
-      </ul>
-    </nav>
   </div>
 </header>
 
 <main class="order-page">
   <div class="container">
-    <h2 class="section-title">طلب خدمة</h2>
-    <p class="section-desc">الرجاء اختيار الخدمات المطلوبة وملء بياناتك لتواصلنا معك.</p>
 
-    <!-- ✅ الفورم الصحيح -->
-    <form action="https://formsubmit.co/eleibra9@gmail.com" method="POST">
+    <h2>طلب خدمة</h2>
 
-      <fieldset class="form-section">
-        <legend>اختر الخدمات</legend>
+    <form id="orderForm" action="https://formsubmit.co/eleibra9@gmail.com" method="POST">
 
-        <p class="free-plan-note">التخطيط والحلول مجانية مع الخدمة</p>
+      <!-- الاسم -->
+      <div class="form-group">
+        <label>الاسم الكامل</label>
+        <input type="text" name="name" placeholder="اكتب اسمك الكامل" required>
+      </div>
 
-        <div class="checkbox-group">
-          <label>
-            <input type="checkbox" name="الخدمات[]" value="التخطيط وإيجاد الحلول (خدمة مجانية)" />
-            <img src="assets/service_plan.png" class="service-icon" />
-            التخطيط وإيجاد الحلول (خدمة مجانية)
-          </label>
+      <!-- الجوال -->
+      <div class="form-group">
+        <label>رقم الجوال</label>
+        <input type="tel" name="الجوال" placeholder="0501234567" required>
+      </div>
 
-          <label>
-            <input type="checkbox" name="الخدمات[]" value="تمديد الكوابل وتركيب رؤوس إيثرنت" />
-            <img src="assets/service_cable.png" class="service-icon" />
-            تمديد الكوابل وتركيب رؤوس إيثرنت
-          </label>
-
-          <label>
-            <input type="checkbox" name="الخدمات[]" value="تهيئة المودم أو الراوتر كنقطة توزيع" />
-            <img src="assets/service_router.png" class="service-icon" />
-            تهيئة المودم أو الراوتر كنقطة توزيع
-          </label>
-
-          <label>
-            <input type="checkbox" name="الخدمات[]" value="تركيب المخارج الجدارية" />
-            <img src="assets/service_port.png" class="service-icon" />
-            تركيب المخارج الجدارية
-          </label>
-        </div>
-
-        <p class="smart-home-note">
-          أنظمة البيت الذكية<br />
-          <span class="small-note">اسأل عنها لمعرفة المزيد</span>
-        </p>
-      </fieldset>
-
-      <fieldset class="form-section">
-        <legend>بياناتك الشخصية</legend>
-
-        <div class="form-group">
-  <label>الاسم الكامل</label>
-  <input type="text" name="name" placeholder="اكتب اسمك الكامل" required />
-</div>
-
-<input type="hidden" name="_subject" value="طلب خدمة جديد من موقع WireX">
-<input type="hidden" name="_next" value="https://wirex-b.github.io/thankyou.html?name={{name}}">
-<input type="hidden" name="_captcha" value="false">
-  
-        <div class="form-group">
-          <label>رقم الجوال (واتساب)</label>
-          <input type="tel" name="الجوال" placeholder="0501234567" required />
-        </div>
-
-        <div class="form-group">
-          <label>المدينة</label>
-          <select name="المدينة" required>
-            <option value="">اختر</option>
-            <option>الدمام</option>
-            <option>الخبر</option>
-            <option>القطيف</option>
-            <option>الظهران</option>
-            <option>أخرى</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>الحي / المنطقة</label>
-          <input type="text" name="الحي" required />
-        </div>
-
-        <div class="form-group">
-          <label>نوع المكان</label>
-          <select name="نوع المكان" required>
-            <option value="">اختر</option>
-            <option>شقة</option>
-            <option>فيلا</option>
-            <option>مكتب</option>
-            <option>محل تجاري</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>ملاحظات</label>
-          <textarea name="ملاحظات" rows="3"></textarea>
-        </div>
-      </fieldset>
+      <!-- المدينة -->
+      <div class="form-group">
+        <label>المدينة</label>
+        <select name="المدينة" required>
+          <option value="">اختر</option>
+          <option>الدمام</option>
+          <option>الخبر</option>
+          <option>القطيف</option>
+          <option>الظهران</option>
+        </select>
+      </div>
 
       <!-- إعدادات FormSubmit -->
       <input type="hidden" name="_subject" value="طلب خدمة جديد من موقع WireX">
       <input type="hidden" name="_next" value="https://wirex-b.github.io/thankyou.html">
       <input type="hidden" name="_captcha" value="false">
 
-      <button type="submit" class="btn btn-primary">إرسال الطلب</button>
-
+      <button type="submit">إرسال الطلب</button>
     </form>
 
   </div>
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <p>© 2025 Ibrahim Ali. جميع الحقوق محفوظة.</p>
-  </div>
-</footer>
+<script>
+  document.getElementById("orderForm").addEventListener("submit", function () {
+    const name = document.querySelector('input[name="name"]').value;
+    localStorage.setItem("clientName", name);
+  });
+</script>
 
 </body>
 </html>
