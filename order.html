@@ -80,8 +80,13 @@
 
         <div class="form-group">
   <label>الاسم الكامل</label>
-  <input type="hidden" name="_next" value="https://wirex-b.github.io/thankyou.html?name={{name}}">
+  <input type="text" name="name" placeholder="اكتب اسمك الكامل" required />
+</div>
 
+<input type="hidden" name="_subject" value="طلب خدمة جديد من موقع WireX">
+<input type="hidden" name="_next" value="https://wirex-b.github.io/thankyou.html?name={{name}}">
+<input type="hidden" name="_captcha" value="false">
+  
         <div class="form-group">
           <label>رقم الجوال (واتساب)</label>
           <input type="tel" name="الجوال" placeholder="0501234567" required />
