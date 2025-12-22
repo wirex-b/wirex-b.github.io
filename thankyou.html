@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>تم استلام الطلب</title>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Tajawal', Arial;
       background: #f5f5f5;
       display: flex;
       align-items: center;
@@ -14,7 +15,7 @@
       margin: 0;
     }
     .box {
-      background: #ffffff;
+      background: #fff;
       padding: 40px;
       border-radius: 12px;
       text-align: center;
@@ -24,8 +25,8 @@
     a {
       display: inline-block;
       margin-top: 20px;
-      text-decoration: none;
       color: #007bff;
+      text-decoration: none;
       font-weight: bold;
     }
   </style>
@@ -40,13 +41,12 @@
   </div>
 
   <script>
-    const params = new URLSearchParams(window.location.search);
-const name = params.get("name");
+    const name = localStorage.getItem("clientName");
 
     if (name) {
-      const cleanName = decodeURIComponent(name);
-      document.getElementById("title").innerText = "شكراً لك " + cleanName + " 🌟";
-      document.getElementById("msg").innerText = "تم استلام طلبك بنجاح يا " + cleanName;
+      document.getElementById("title").innerText = "شكراً لك " + name + " 🌟";
+      document.getElementById("msg").innerText = "تم استلام طلبك بنجاح يا " + name;
+      localStorage.removeItem("clientName");
     }
   </script>
 </body>
