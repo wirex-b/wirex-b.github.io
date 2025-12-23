@@ -1,231 +1,209 @@
-‏<!DOCTYPE html>
-‏<html lang="ar" dir="rtl">
-‏<head>
-‏  <meta charset="UTF-8" />
-‏  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-‏  <title>WireX – خدمات الشبكات والإنترنت</title>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WireX – خدمات الشبكات والإنترنت</title>
 
-‏  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
-‏  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-‏  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 
-‏  <style>
-‏    .hero-content h2 {
-‏      font-size: 38px;
-‏      color: #0F4C75;
-‏      margin-bottom: 16px;
-‏      font-weight: 700;
-    }
-
-‏    .hero-main-text {
-‏      font-size: 18px;
-‏      line-height: 1.9;
-‏      color: #333;
-‏      max-width: 720px;
-‏      margin: 0 auto 14px;
-    }
-
-‏    .hero-sub-text {
-‏      font-size: 16px;
-‏      line-height: 1.8;
-‏      color: #555;
-‏      max-width: 700px;
-‏      margin: 0 auto 20px;
-    }
-
-‏    .free-plan-note {
-‏      display: inline-block;
-‏      background: #EAF4FB;
-‏      color: #0F4C75;
-‏      font-weight: 600;
-‏      padding: 10px 18px;
-‏      border-radius: 10px;
-‏      margin: 14px 0;
-    }
-
-‏    .service-regions {
-‏      font-size: 14px;
-‏      color: #666;
-‏      margin-top: 12px;
-    }
-
-‏    .hero-cta {
-‏      margin-top: 28px;
-    }
-
-‏    .hero-cta .btn {
-‏      padding: 14px 26px;
-‏      font-size: 16px;
-‏      font-weight: 700;
-‏      border-radius: 10px;
-    }
-
-‏    @media (max-width: 768px) {
-‏      .hero-content h2 {
-‏        font-size: 30px;
-      }
-‏      .hero-main-text {
-‏        font-size: 16px;
-      }
-    }
-    
-‏    .cta-steps {
-‏  margin-top: 14px;
-‏  font-size: 14px;
-‏  color: #666;
-‏  display: flex;
-‏  gap: 14px;
-‏  justify-content: center;
-‏  flex-wrap: wrap;
-}
-
-‏.cta-steps span {
-‏  background: #f2f6fa;
-‏  padding: 6px 12px;
-‏  border-radius: 8px;
-}
-    
+  <style>
+    /* ===== HERO ===== */
     .hero {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-  min-height: auto !important;
-}
- 
-.site-header + .hero {
-  margin-top: 0 !important;
-}
+      background: #f7f9fb;
+      padding: 60px 0 40px;
+      text-align: center;
+    }
 
-‏  </style>
-‏</head>
+    .hero h2 {
+      font-size: 34px;
+      color: #0F4C75;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
 
-‏<body>
+    .hero-main-text {
+      font-size: 18px;
+      line-height: 1.9;
+      color: #333;
+      max-width: 720px;
+      margin: 0 auto 14px;
+    }
 
-‏<header class="site-header">
-‏  <div class="container header-container">
-‏    <div class="logo">
-‏      <img src="assets/wirex_logo_white.png" alt="WireX Logo" class="site-logo" />
-‏      <p class="tagline">خبراء الشبكات والإنترنت</p>
-‏    </div>
-‏    <nav class="main-nav">
-‏      <ul>
-‏        <li><a href="#services">الخدمات</a></li>
-‏        <li><a href="order.html">طلب خدمة</a></li>
-‏        <li><a href="#contact">تواصل معنا</a></li>
-‏      </ul>
-‏    </nav>
-‏  </div>
-‏</header>
+    .hero-sub-text {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
 
-<!-- الواجهة الرئيسية -->
-‏<section class="hero">
-‏  <div class="container hero-content">
+    .free-plan-note {
+      display: inline-block;
+      background: #EAF4FB;
+      color: #0F4C75;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: 10px;
+      margin: 14px 0;
+    }
 
-‏    <h2>شبكة بيتك قوية في كل زاوية</h2>
+    .service-regions {
+      font-size: 14px;
+      color: #666;
+      margin-top: 12px;
+    }
 
-‏    <p class="hero-main-text">
+    .hero-cta {
+      margin-top: 28px;
+    }
+
+    .hero-cta .btn {
+      padding: 14px 26px;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 10px;
+    }
+
+    .cta-steps {
+      margin-top: 14px;
+      font-size: 14px;
+      color: #666;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-steps span {
+      background: #f2f6fa;
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 28px;
+      }
+      .hero-main-text {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ===== HEADER (نفس order بالضبط) ===== -->
+<header class="site-header">
+  <div class="container header-container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/wirex_logo_white.png" alt="WireX Logo" class="site-logo" />
+      </a>
+      <p class="tagline">خبراء الشبكات والإنترنت</p>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+
+    <h2>شبكة بيتك قوية في كل زاوية</h2>
+
+    <p class="hero-main-text">
       نخلّي الإنترنت يوصل لكل زاوية في البيت بسرعة ثابتة وبدون تقطيع —
       مو بس جنب الراوتر.
-‏    </p>
+    </p>
 
-‏    <p class="hero-sub-text">
+    <p class="hero-sub-text">
       نبدأ بالتخطيط الصح، وننفّذ بشغل نظيف:
       تمديد كيابل احترافي، توزيع نقاط الإنترنت بذكاء،
       وتركيب مخارج جدارية تضمن تغطية قوية في كل مكان.
-‏    </p>
+    </p>
 
-‏    <div class="free-plan-note">
+    <div class="free-plan-note">
       التخطيط واختيار الحل الأنسب مجانًا مع الخدمة
-‏    </div>
+    </div>
 
-‏    <p class="service-regions">
+    <p class="service-regions">
       نخدم: الدمام، الخبر، الظهران، القطيف وما حولها 📍
-‏    </p>
+    </p>
 
-‏    <div class="hero-icons">
-‏      <span class="icon-circle"><img src="assets/hero_globe.png" alt="" /></span>
-‏      <span class="icon-circle"><img src="assets/hero_plug.png" alt="" /></span>
-‏      <span class="icon-circle"><img src="assets/hero_bars.png" alt="" /></span>
-‏      <span class="icon-circle"><img src="assets/hero_dish.png" alt="" /></span>
-‏      <span class="icon-circle"><img src="assets/hero_house.png" alt="" /></span>
-‏    </div>
+    <div class="hero-cta">
+      <a href="order.html" class="btn btn-primary">
+        ابدأ الخدمة بتقييم مجاني
+      </a>
+    </div>
 
-‏    <div class="hero-cta">
-‏      <a href="order.html" class="btn btn-primary">
-ابدأ الخدمة بتقييم مجاني
-‏      </a>
-‏    </div>
+    <div class="cta-steps">
+      <span>1️⃣ تقييم الشبكة</span>
+      <span>2️⃣ نحدّد الحل الأنسب</span>
+      <span>3️⃣ التنفيذ بعد موافقتك</span>
+    </div>
 
-‏<div class="cta-steps">
-‏  <span>1️⃣ تقييم الشبكة</span>
-‏  <span>2️⃣ نحدّد الحل الأنسب</span>
-‏  <span>3️⃣ التنفيذ بعد موافقتك</span>
-‏</div>
+  </div>
+</section>
 
-‏  </div>
-‏</section>
-
-<!-- الخدمات -->
-‏<section id="services" class="services">
-‏  <div class="container">
-‏    <h2 class="section-title">خدماتنا</h2>
-‏    <p class="section-desc">
+<!-- ===== SERVICES ===== -->
+<section id="services" class="services">
+  <div class="container">
+    <h2 class="section-title">خدماتنا</h2>
+    <p class="section-desc">
       حلول متكاملة لترتيب شبكة البيت من الأساس حتى أفضل أداء.
-‏    </p>
+    </p>
 
-‏    <div class="services-grid">
-‏      <div class="service-category">
-‏        <img src="assets/service_plan.png" class="service-icon-large" />
-‏        <h3>التخطيط وإيجاد الحلول</h3>
-‏        <p>تقييم الشبكة واختيار الحل الأنسب (خدمة مجانية).</p>
-‏      </div>
+    <div class="services-grid">
+      <div class="service-category">
+        <img src="assets/service_plan.png" class="service-icon-large" />
+        <h3>التخطيط وإيجاد الحلول</h3>
+        <p>تقييم الشبكة واختيار الحل الأنسب (خدمة مجانية).</p>
+      </div>
 
-‏      <div class="service-category">
-‏        <img src="assets/service_cable.png" class="service-icon-large" />
-‏        <h3>تمديد الكوابل</h3>
-‏        <p>تمديد احترافي لثبات وسرعة الاتصال.</p>
-‏      </div>
+      <div class="service-category">
+        <img src="assets/service_cable.png" class="service-icon-large" />
+        <h3>تمديد الكوابل</h3>
+        <p>تمديد احترافي لثبات وسرعة الاتصال.</p>
+      </div>
 
-‏      <div class="service-category">
-‏        <img src="assets/service_router.png" class="service-icon-large" />
-‏        <h3>تهيئة نقاط التوزيع</h3>
-‏        <p>تحسين التغطية في كامل المنزل.</p>
-‏      </div>
+      <div class="service-category">
+        <img src="assets/service_router.png" class="service-icon-large" />
+        <h3>تهيئة نقاط التوزيع</h3>
+        <p>تحسين التغطية في كامل المنزل.</p>
+      </div>
 
-‏      <div class="service-category">
-‏        <img src="assets/service_port.png" class="service-icon-large" />
-‏        <h3>مخارج جدارية</h3>
-‏        <p>تنفيذ نظيف وتغطية قوية طويلة الأمد.</p>
-‏      </div>
-‏    </div>
+      <div class="service-category">
+        <img src="assets/service_port.png" class="service-icon-large" />
+        <h3>مخارج جدارية</h3>
+        <p>تنفيذ نظيف وتغطية قوية طويلة الأمد.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-‏    <div class="smart-home-note">
-‏      <strong>أنظمة البيت الذكية</strong><br />
-‏      <span class="small-note">اسأل عنها لمعرفة المزيد</span>
-‏    </div>
-‏  </div>
-‏</section>
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="contact">
+  <div class="container contact-container">
+    <div class="contact-info">
+      <h2>تواصل معنا</h2>
+      <p>تواصل مباشرة عبر واتساب:</p>
+      <p class="phone">
+        <a href="https://wa.me/966505781824" class="whatsapp-link" target="_blank">
+          0505781824
+        </a>
+      </p>
+      <img src="assets/whatsapp_qr.jpeg" class="qr-code" />
+    </div>
+  </div>
+</section>
 
-<!-- التواصل -->
-‏<section id="contact" class="contact">
-‏  <div class="container contact-container">
-‏    <div class="contact-info">
-‏      <h2>تواصل معنا</h2>
-‏      <p>تواصل مباشرة عبر واتساب:</p>
-‏      <p class="phone">
-‏        <a href="https://wa.me/966505781824" class="whatsapp-link" target="_blank">
-‏          <i class="fa-brands fa-whatsapp"></i> 0505781824
-‏        </a>
-‏      </p>
-‏      <img src="assets/whatsapp_qr.jpeg" class="qr-code" />
-‏    </div>
-‏  </div>
-‏</section>
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Ibrahim Ali. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
 
-‏<footer class="site-footer">
-‏  <div class="container">
-‏    <p>© 2025 Ibrahim Ali. جميع الحقوق محفوظة.</p>
-‏  </div>
-‏</footer>
-
-‏</body>
-‏</html>
+</body>
+</html>
