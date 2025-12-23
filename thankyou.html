@@ -24,27 +24,34 @@
 
     .thankyou-card {
       width: 100%;
-      max-width: 420px;
+      max-width: 440px;
       background: #ffffff;
-      border-radius: 20px;
-      padding: 28px 22px;
-      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+      border-radius: 22px;
+      padding: 30px 24px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
       text-align: center;
     }
 
     .thankyou-card h2 {
-      font-size: 24px;
+      font-size: 26px;
       margin-bottom: 14px;
       color: #0F4C75;
     }
 
-    .thankyou-card .status {
+    .client-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 14px;
+    }
+
+    .status {
       background: #EAF4FB;
       color: #0F4C75;
       font-size: 15px;
-      padding: 10px 16px;
-      border-radius: 12px;
-      margin-bottom: 16px;
+      padding: 12px 18px;
+      border-radius: 14px;
+      margin-bottom: 18px;
       font-weight: 600;
     }
 
@@ -52,24 +59,19 @@
       font-size: 15px;
       line-height: 1.9;
       color: #555;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
-    .thankyou-card .btn {
+    .btn {
       display: block;
       width: 100%;
-      padding: 14px;
+      padding: 15px;
       font-size: 16px;
       font-weight: 700;
       background: #0F4C75;
       color: #fff;
-      border-radius: 14px;
+      border-radius: 16px;
       text-decoration: none;
-      transition: background 0.2s ease;
-    }
-
-    .thankyou-card .btn:hover {
-      background: #0c3d60;
     }
   </style>
 </head>
@@ -80,6 +82,10 @@
     <div class="thankyou-card">
 
       <h2>✨ شكرًا لك</h2>
+
+      <div class="client-name" id="clientName">
+        <!-- الاسم يطلع هنا -->
+      </div>
 
       <div class="status">
         تم تسجيل طلبك بنجاح في النظام
@@ -98,6 +104,15 @@
 
     </div>
   </div>
+
+  <script>
+    const name = localStorage.getItem("clientName");
+    if (name) {
+      document.getElementById("clientName").textContent = name + " 👋";
+    } else {
+      document.getElementById("clientName").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
