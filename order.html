@@ -7,6 +7,41 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- إضافات خاصة بصفحة الطلب فقط -->
+  <style>
+    .form-section {
+      margin-bottom: 26px;
+    }
+
+    .form-section label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .form-section input[type="checkbox"] {
+      margin-left: 6px;
+      transform: scale(1.1);
+    }
+
+    .note {
+      display: block;
+      margin: 6px 0 16px;
+      font-size: 13px;
+      color: #b00020;
+    }
+
+    .btn-primary {
+      width: 100%;
+      padding: 16px;
+      font-size: 17px;
+      font-weight: 700;
+      border-radius: 16px;
+      background: #0F4C75;
+    }
+  </style>
 </head>
 
 <body>
@@ -32,35 +67,31 @@
 
       <!-- الخدمات -->
       <fieldset class="form-section">
-<legend>اختر الخدمات</legend>
+        <legend>اختر الخدمات</legend>
 
-<label>
-  <input type="checkbox" name="الخدمات[]" value="التخطيط وإيجاد الحلول (مجاني)">
-  التخطيط وإيجاد الحلول (مجاني)
-</label>
-<br>
+        <label>
+          <input type="checkbox" name="الخدمات[]" value="التخطيط وإيجاد الحلول (مجاني)">
+          التخطيط وإيجاد الحلول (مجاني)
+        </label>
 
-<small class="note">
-*قد تُحتسب رسوم زيارة للمناطق البعيدة فقط.
-</small>
-<br><br>
+        <small class="note">
+          * قد تُحتسب رسوم زيارة للمناطق البعيدة فقط
+        </small>
 
-<label>
-  <input type="checkbox" name="الخدمات[]" value="تهيئة الشبكة ونقاط التوزيع">
-  تهيئة الشبكة ونقاط التوزيع
-</label>
-<br>
+        <label>
+          <input type="checkbox" name="الخدمات[]" value="تهيئة الشبكة ونقاط التوزيع">
+          تهيئة الشبكة ونقاط التوزيع
+        </label>
 
-<label>
-  <input type="checkbox" name="الخدمات[]" value="تمديد كوابل">
-  تمديد كوابل
-</label>
-<br>
+        <label>
+          <input type="checkbox" name="الخدمات[]" value="تمديد كوابل">
+          تمديد كوابل
+        </label>
 
-<label>
-  <input type="checkbox" name="الخدمات[]" value="مخارج جدارية">
-  مخارج جدارية
-</label>
+        <label>
+          <input type="checkbox" name="الخدمات[]" value="مخارج جدارية">
+          مخارج جدارية
+        </label>
       </fieldset>
 
       <!-- البيانات -->
@@ -89,7 +120,7 @@
           </select>
         </div>
 
-<div class="form-group">
+        <div class="form-group">
           <label>الحي</label>
           <textarea name="الحي" rows="3"></textarea>
         </div>
@@ -105,7 +136,9 @@
       <input type="hidden" name="_next" value="https://wirex-b.github.io/thankyou.html" />
       <input type="hidden" name="_captcha" value="false" />
 
-      <button type="submit" class="btn btn-primary">إرسال الطلب</button>
+      <button type="submit" class="btn btn-primary">
+        إرسال الطلب
+      </button>
     </form>
   </div>
 </main>
