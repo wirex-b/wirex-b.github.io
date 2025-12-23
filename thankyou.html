@@ -34,7 +34,7 @@
 
     .thankyou-card h2 {
       font-size: 26px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       color: #0F4C75;
     }
 
@@ -62,16 +62,27 @@
       margin-bottom: 22px;
     }
 
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 15px;
-      font-size: 16px;
-      font-weight: 700;
-      background: #0F4C75;
-      color: #fff;
-      border-radius: 16px;
+    /* زر العودة – ناعم وخفيف */
+    .btn-back {
+      display: inline-block;
+      padding: 14px 26px;
+      font-size: 15px;
+      font-weight: 600;
+      background: #EAF4FB;
+      color: #0F4C75;
+      border-radius: 14px;
       text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .btn-back:hover {
+      background: #dbeaf6;
+    }
+
+    .auto-note {
+      margin-top: 16px;
+      font-size: 13px;
+      color: #777;
     }
   </style>
 </head>
@@ -83,9 +94,7 @@
 
       <h2>✨ شكرًا لك</h2>
 
-      <div class="client-name" id="clientName">
-        <!-- الاسم يطلع هنا -->
-      </div>
+      <div class="client-name" id="clientName"></div>
 
       <div class="status">
         تم تسجيل طلبك بنجاح في النظام
@@ -98,32 +107,29 @@
         وقت الرد المتوقع خلال 24 ساعة.
       </p>
 
-      <a href="index.html" class="btn">
+      <a href="index.html" class="btn-back">
         العودة للصفحة الرئيسية
       </a>
+
+      <div class="auto-note">
+        سيتم تحويلك تلقائيًا إلى واتساب خلال ثوانٍ…
+      </div>
 
     </div>
   </div>
 
   <script>
+    /* إظهار اسم العميل */
     const name = localStorage.getItem("clientName");
-
     if (name) {
       document.getElementById("clientName").textContent = name + " 👋";
     } else {
       document.getElementById("clientName").style.display = "none";
     }
 
-    // تحويل واتساب بعد 4.5 ثواني (بدون إلغاء صفحة الشكر)
+    /* تحويل تلقائي للواتساب بعد 4.5 ثواني */
     setTimeout(() => {
-      const message =
-`تم استلام طلبك بنجاح ✅
-سيتم التواصل معك قريبًا بإذن الله`;
-
-      const whatsappURL =
-        "https://wa.me/966505781824?text=" + encodeURIComponent(message);
-
-      window.open(whatsappURL, "_blank");
+      window.location.href = "https://wa.me/966505781824";
     }, 4500);
   </script>
 
