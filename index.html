@@ -90,42 +90,22 @@
 
 ‏<body>
 
-‏<header.site-header {
-  background: #0F6C8D; /* الأزرق */
-  padding: 14px 0;
-  height: auto;
-}
+‏<header class="site-header">
+‏  <div class="container header-container">
+‏    <div class="logo">
+‏      <img src="assets/wirex_logo_white.png" alt="WireX Logo" class="site-logo" />
+‏      <p class="tagline">خبراء الشبكات والإنترنت</p>
+‏    </div>
+‏    <nav class="main-nav">
+‏      <ul>
+‏        <li><a href="#services">الخدمات</a></li>
+‏        <li><a href="order.html">طلب خدمة</a></li>
+‏        <li><a href="#contact">تواصل معنا</a></li>
+‏      </ul>
+‏    </nav>
+‏  </div>
+‏</header>
 
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.site-logo {
-  height: 60px; /* نفس الحجم اللي عاجبك */
-  width: auto;
-}
-
-.main-nav ul {
-  display: flex;
-  gap: 24px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.main-nav a {
-  color: #fff;
-  font-weight: 500;
-  text-decoration: none;
-}
 <!-- الواجهة الرئيسية -->
 ‏<section class="hero">
 ‏  <div class="container hero-content">
