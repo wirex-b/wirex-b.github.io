@@ -27,14 +27,14 @@
       max-width: 440px;
       background: #ffffff;
       border-radius: 22px;
-      padding: 30px 24px;
+      padding: 30px 24px 34px;
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
       text-align: center;
     }
 
     .thankyou-card h2 {
       font-size: 26px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       color: #0F4C75;
     }
 
@@ -59,31 +59,32 @@
       font-size: 15px;
       line-height: 1.9;
       color: #555;
-      margin-bottom: 22px;
+      margin-bottom: 26px;
     }
 
-    /* زر العودة – ناعم وخفيف */
-.btn-back {
-  display: inline-block;
-  padding: 15px 32px;
-  font-size: 16px;
-  font-weight: 700;
-  background: #0F4C75;          /* أغمق وواضح */
-  color: #ffffff;
-  border-radius: 16px;
-  text-decoration: none;
-  box-shadow: 0 6px 16px rgba(15, 76, 117, 0.25); /* ثقل خفيف */
-  transition: all 0.2s ease;
-}
-
-.btn-back:hover {
-  background: #0c3e61;
-  transform: translateY(-1px);
-}
+    /* زر العودة – ثقيل وواضح */
+    .btn-back {
+      display: block;
+      width: 100%;
+      padding: 17px;
+      font-size: 17px;
+      font-weight: 700;
+      background: #0F4C75;
+      color: #ffffff;
+      border-radius: 18px;
+      text-decoration: none;
+      box-shadow: 0 8px 22px rgba(15, 76, 117, 0.3);
+      transition: all 0.2s ease;
     }
 
+    .btn-back:hover {
+      background: #0c3e61;
+      transform: translateY(-1px);
+    }
+
+    /* ملاحظة التحويل */
     .auto-note {
-      margin-top: 16px;
+      margin-top: 22px;
       font-size: 13px;
       color: #777;
     }
@@ -130,7 +131,7 @@
       document.getElementById("clientName").style.display = "none";
     }
 
-    /* تحويل تلقائي للواتساب بعد 4.5 ثواني */
+    /* تحويل تلقائي للواتساب بعد 5 ثواني */
     setTimeout(() => {
       window.location.href = "https://wa.me/966505781824";
     }, 5000);
