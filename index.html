@@ -85,6 +85,55 @@
   border-radius: 8px;
 }
     
+    /* ===== Header Smart Layout ===== */
+
+.site-header {
+  padding: 12px 0; /* يصغر ارتفاع الهيدر */
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* اللوقو يسار */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* لا نلمس حجم اللوقو */
+.site-logo {
+  height: auto;
+  max-height: 70px; /* يحافظ على حجمه */
+}
+
+/* القائمة يمين */
+.main-nav ul {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* تحسين شكل الروابط */
+.main-nav a {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+    
   </style>
 </head>
 
