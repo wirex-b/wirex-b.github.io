@@ -10,28 +10,6 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    /* ===== نقل القائمة لليسار بدون المساس باللوقو ===== */
-    .header-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .main-nav {
-      margin-right: auto; /* هذا السطر هو المفتاح */
-    }
-
-    .main-nav ul {
-      display: flex;
-      gap: 24px;
-    }
-
-    .main-nav a {
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    /* ===== تنسيقات الهيرو (كما هي) ===== */
     .hero-content h2 {
       font-size: 38px;
       color: #0F4C75;
@@ -90,58 +68,6 @@
         font-size: 16px;
       }
     }
-    
-    /* ترتيب الهيدر: اللوقو يمين والقائمة يسار */
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* حجم اللوقو بدون ضغط */
-.site-logo {
-  max-height: 56px;
-  width: auto;
-}
-
-/* القائمة في نفس السطر */
-.main-nav ul {
-  display: flex;
-  gap: 24px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* عناصر القائمة */
-.main-nav a {
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 15px;
-  text-decoration: none;
-}
-
-/* تصغير ارتفاع الهيدر */
-.site-header {
-  padding: 12px 0;
-}
-
-/* موبايل */
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: row;
-  }
-
-  .main-nav ul {
-    gap: 16px;
-    font-size: 14px;
-  }
-
-  .site-logo {
-    max-height: 48px;
-  }
-}
-    
   </style>
 </head>
 
@@ -153,7 +79,6 @@
       <img src="assets/wirex_logo_white.png" alt="WireX Logo" class="site-logo" />
       <p class="tagline">خبراء الشبكات والإنترنت</p>
     </div>
-
     <nav class="main-nav">
       <ul>
         <li><a href="#services">الخدمات</a></li>
@@ -206,13 +131,68 @@
   </div>
 </section>
 
+<!-- الخدمات -->
+<section id="services" class="services">
+  <div class="container">
+    <h2 class="section-title">خدماتنا</h2>
+    <p class="section-desc">
+      حلول متكاملة لترتيب شبكة البيت من الأساس حتى أفضل أداء.
+    </p>
+
+    <div class="services-grid">
+      <div class="service-category">
+        <img src="assets/service_plan.png" class="service-icon-large" />
+        <h3>التخطيط وإيجاد الحلول</h3>
+        <p>تقييم الشبكة واختيار الحل الأنسب (خدمة مجانية).</p>
+      </div>
+
+      <div class="service-category">
+        <img src="assets/service_cable.png" class="service-icon-large" />
+        <h3>تمديد الكوابل</h3>
+        <p>تمديد احترافي لثبات وسرعة الاتصال.</p>
+      </div>
+
+      <div class="service-category">
+        <img src="assets/service_router.png" class="service-icon-large" />
+        <h3>تهيئة نقاط التوزيع</h3>
+        <p>تحسين التغطية في كامل المنزل.</p>
+      </div>
+
+      <div class="service-category">
+        <img src="assets/service_port.png" class="service-icon-large" />
+        <h3>مخارج جدارية</h3>
+        <p>تنفيذ نظيف وتغطية قوية طويلة الأمد.</p>
+      </div>
+    </div>
+
+    <div class="smart-home-note">
+      <strong>أنظمة البيت الذكية</strong><br />
+      <span class="small-note">اسأل عنها لمعرفة المزيد</span>
+    </div>
+  </div>
+</section>
+
+<!-- التواصل -->
+<section id="contact" class="contact">
+  <div class="container contact-container">
+    <div class="contact-info">
+      <h2>تواصل معنا</h2>
+      <p>تواصل مباشرة عبر واتساب:</p>
+      <p class="phone">
+        <a href="https://wa.me/966505781824" class="whatsapp-link" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> 0505781824
+        </a>
+      </p>
+      <img src="assets/whatsapp_qr.jpeg" class="qr-code" />
+    </div>
+  </div>
+</section>
 
 <footer class="site-footer">
   <div class="container">
     <p>© 2025 Ibrahim Ali. جميع الحقوق محفوظة.</p>
   </div>
 </footer>
-
 
 </body>
 </html>
