@@ -11,6 +11,50 @@
   <style>
     body {
       font-family: 'Tajawal', sans-serif;
+      margin: 0;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #0F4C75;
+      padding: 18px 0;
+      transition: all 0.3s ease;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .logo {
+      text-align: center;
+    }
+
+    .site-logo {
+      height: 56px;
+      transition: all 0.3s ease;
+    }
+
+    .tagline {
+      color: #fff;
+      font-size: 14px;
+      margin-top: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .site-header.shrink {
+      padding: 8px 0;
+    }
+
+    .site-header.shrink .site-logo {
+      height: 40px;
+    }
+
+    .site-header.shrink .tagline {
+      font-size: 12px;
     }
 
     /* ===== HERO ===== */
@@ -24,7 +68,6 @@
       font-size: 34px;
       color: #0F4C75;
       margin-bottom: 16px;
-      font-weight: 700;
     }
 
     .hero-main-text {
@@ -59,158 +102,29 @@
       margin-top: 12px;
     }
 
-    .hero-cta {
-      margin-top: 28px;
-    }
-
-    .cta-steps {
-      margin-top: 14px;
-      font-size: 14px;
-      color: #666;
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .cta-steps span {
-      background: #f2f6fa;
-      padding: 6px 12px;
-      border-radius: 8px;
-    }
-
-    /* ===== CONTACT ===== */
-    .contact {
-      padding: 60px 0;
-      text-align: center;
-      background: #f7f9fb;
-    }
-
-    .contact-note {
-      color: #555;
-      margin-bottom: 20px;
-      font-size: 15px;
-    }
-
-    .whatsapp-btn {
-      display: inline-block;
-      margin: 16px 0;
-      padding: 14px 24px;
+    .btn-primary {
+      background: #0F4C75;
+      color: #ffffff;
+      padding: 16px 36px;
+      border-radius: 999px;
       font-size: 16px;
       font-weight: 700;
-      border-radius: 10px;
+      text-decoration: none;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 240px;
+      box-shadow: 0 6px 16px rgba(15, 76, 117, 0.25);
     }
 
-    .phone {
-      margin: 12px 0;
-      font-size: 15px;
-      color: #333;
+    .btn-primary:hover {
+      background: #0c3d5f;
     }
-
-    .qr-box {
-      margin-top: 24px;
-      opacity: 0.9;
-    }
-
-    .qr-code {
-      width: 120px;
-      height: auto;
-      margin-bottom: 6px;
-    }
-
-    .qr-box span {
-      display: block;
-      font-size: 12px;
-      color: #777;
-    }
-
-    @media (max-width: 768px) {
-      .hero h2 {
-        font-size: 28px;
-      }
-      .hero-main-text {
-        font-size: 16px;
-      }
-    }
-    
-    /* ===== CONTACT REFINEMENT ===== */
-
-.contact-info {
-  text-align: center;
-}
-
-.whatsapp-soft {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin: 14px 0;
-  font-size: 15px;
-  color: #0F4C75;
-  text-decoration: none;
-  background: #EAF4FB;
-  padding: 10px 18px;
-  border-radius: 999px;
-  font-weight: 600;
-  transition: all 0.25s ease;
-}
-
-.whatsapp-soft:hover {
-  background: #D6ECFA;
-  transform: translateY(-1px);
-}
-
-.phone {
-  margin: 10px 0 20px;
-  font-size: 14px;
-  color: #444;
-}
-
-.qr-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;   /* ← هذا اللي يوسّط الباركود */
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.qr-code {
-  width: 130px;
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 6px;
-}
-
-.qr-box span {
-  font-size: 12px;
-  color: #777;
-}
-    /* زر طلب المعاينة – نسخة محسّنة */
-.btn-primary {
-  background: #0F4C75;
-  color: #ffffff;
-  padding: 16px 36px;
-  border-radius: 999px;
-  font-size: 16px;
-  font-weight: 700;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 240px;
-  box-shadow: 0 6px 16px rgba(15, 76, 117, 0.25);
-  transition: all 0.25s ease;
-}
-
-.btn-primary:hover {
-  background: #0c3d5f;
-  transform: translateY(-2px);
-}
   </style>
 </head>
 
 <body>
 
-<!-- ===== HEADER ===== -->
 <header class="site-header">
   <div class="container header-container">
     <div class="logo">
@@ -222,21 +136,16 @@
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
 <section class="hero">
   <div class="container">
-
     <h2>شبكة بيتك قوية في كل زاوية</h2>
 
     <p class="hero-main-text">
-      نخلّي الإنترنت يوصل لكل زاوية في البيت بسرعة ثابتة وبدون تقطيع —
-      مو بس جنب الراوتر.
+      نخلّي الإنترنت يوصل لكل زاوية في البيت بسرعة ثابتة وبدون تقطيع — مو بس جنب الراوتر.
     </p>
 
     <p class="hero-sub-text">
-      نبدأ بالتخطيط الصح، وننفّذ بشغل نظيف:
-      تمديد كيابل احترافي، توزيع نقاط الإنترنت بذكاء،
-      وتركيب مخارج جدارية تضمن اتصال ثابت وتغطية قوية.
+      تخطيط ذكي، تمديد نظيف، وتوزيع احترافي لنقاط الشبكة.
     </p>
 
     <div class="free-plan-note">
@@ -247,103 +156,23 @@
       نخدم: الخبر، الظهران، الدمام، القطيف وما حولها 📍
     </p>
 
-    <div class="hero-cta">
-<a href="order.html" class="btn btn-primary">
-  طلب معاينة مبدئية
-</a>
-    </div>
-
-    <div class="cta-steps">
-      <span>1️⃣ تقييم الشبكة</span>
-      <span>2️⃣ نحدّد الحل الأنسب</span>
-      <span>3️⃣ التنفيذ بعد موافقتك</span>
-    </div>
-
+    <a href="order.html" class="btn-primary">
+      طلب معاينة مبدئية
+    </a>
   </div>
 </section>
 
-<!-- ===== SERVICES ===== -->
-<section id="services" class="services">
-  <div class="container">
-    <h2 class="section-title">خدماتنا</h2>
-    <p class="section-desc">
-      حلول متكاملة لترتيب شبكة البيت من الأساس حتى أفضل أداء.
-    </p>
+<script>
+  const header = document.querySelector(".site-header");
 
-    <div class="services-grid">
-
-      <div class="service-category">
-        <img src="assets/service_plan.png" class="service-icon-large" />
-        <h3>التخطيط وإيجاد الحلول</h3>
-        <p>
-          التقييم داخل المدن القريبة (الدمام، الخبر، الظهران) بدون رسوم،
-          وقد تُحتسب رسوم زيارة للمناطق البعيدة مثل القطيف والجبيل.
-        </p>
-      </div>
-
-      <div class="service-category">
-        <img src="assets/service_cable.png" class="service-icon-large" />
-        <h3>تمديد الكوابل</h3>
-        <p>
-          تمديد احترافي يضمن ثبات الاتصال وسرعته.
-        </p>
-      </div>
-
-      <div class="service-category">
-        <img src="assets/service_router.png" class="service-icon-large" />
-        <h3>تهيئة وتوزيع الشبكة المنزلية</h3>
-        <p>
-          نضبط الراوتر ونقاط التوزيع لتكون الإشارة ثابتة في كامل البيت،
-          مع الاستفادة من الأجهزة الحالية أو توفير راوترات مناسبة عند الحاجة.
-        </p>
-      </div>
-
-      <div class="service-category">
-        <img src="assets/service_port.png" class="service-icon-large" />
-        <h3>مخارج جدارية</h3>
-        <p>
-          تنفيذ نظيف يضمن اتصال ثابت ومظهر مرتب طويل الأمد.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== CONTACT (مُعدّل) ===== -->
-<section id="contact" class="contact">
-  <div class="container contact-container">
-    <div class="contact-info">
-
-      <h2>تواصل معنا</h2>
-      <p class="contact-note">
-        تواصل مباشرة للاستفسار أو حجز المعاينة
-      </p>
-
-      <!-- زر واتساب ناعم -->
-      <a href="https://wa.me/966505781824" target="_blank" class="whatsapp-soft">
-        💬 تواصل عبر واتساب
-      </a>
-
-      <p class="phone">
-        أو الاتصال على: <strong>0505781824</strong>
-      </p>
-
-      <!-- QR Code بالمنتصف -->
-      <div class="qr-box">
-        <img src="assets/whatsapp_qr.jpeg" class="qr-code" alt="WhatsApp QR Code" />
-        <span>امسح الرمز للتواصل السريع</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container">
-    <p>© 2025 WireX. جميع الحقوق محفوظة.</p>
-  </div>
-</footer>
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 80) {
+      header.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+    }
+  });
+</script>
 
 </body>
 </html>
