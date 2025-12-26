@@ -106,18 +106,20 @@
           <input type="text" id="clientName" name="الاسم" placeholder="اكتب اسمك الكامل" required />
         </div>
 
-        <div class="form-group">
+<div class="form-group">
   <label>رقم الجوال</label>
   <input
     type="tel"
+    id="phone"
     name="الجوال"
     placeholder="05xxxxxxxx"
     required
-    pattern="05[0-9]{8}"
     maxlength="10"
     inputmode="numeric"
-    title="اكتب رقم جوال صحيح يبدأ بـ 05 ويتكون من 10 أرقام"
   />
+  <small id="phoneError" style="color:#b00020; display:none; margin-top:4px;">
+    <!-- رسالة الخطأ تظهر هنا -->
+  </small>
 </div>
 
         <div class="form-group">
@@ -165,6 +167,42 @@
   document.getElementById("orderForm").addEventListener("submit", function () {
     const name = document.getElementById("clientName").value;
     localStorage.setItem("clientName", name);
+  });
+</script>
+
+<script>
+  const phoneInput = document.getElementById("phone");
+  const phoneError = document.getElementById("phoneError");
+  const form = document.getElementById("orderForm");
+
+  phoneInput.addEventListener("input", () => {
+    const value = phoneInput.value;
+
+    phoneError.style.display = "block";
+
+    if (!/^[0-9]*$/.test(value)) {
+      phoneError.textContent = "الرقم لازم يكون أرقام فقط";
+      phoneInput.setCustomValidity("invalid");
+    } else if (!value.startsWith("05")) {
+      phoneError.textContent = "رقم الجوال لازم يبدأ بـ 05";
+      phoneInput.setCustomValidity("invalid");
+    } else if (value.length < 10) {
+      phoneError.textContent = "رقم الجوال ناقص";
+      phoneInput.setCustomValidity("invalid");
+    } else if (value.length > 10) {
+      phoneError.textContent = "رقم الجوال أكثر من 10 أرقام";
+      phoneInput.setCustomValidity("invalid");
+    } else {
+      phoneError.style.display = "none";
+      phoneInput.setCustomValidity("");
+    }
+  });
+
+  form.addEventListener("submit", (e) => {
+    if (!phoneInput.checkValidity()) {
+      e.preventDefault();
+      phoneInput.focus();
+    }
   });
 </script>
 
