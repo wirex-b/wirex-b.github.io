@@ -515,10 +515,22 @@ img {
 }
 
 تعديل الموقع الخاص 
+.site-footer {
+  background-color: #0b6a8f;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-text {
+  margin: 0;
+  color: #ffffff;
+  font-size: 14px;
+}
+
 .footer-link {
-  color: #38bdf8; /* لون رايق */
+  color: #1e90ff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .footer-link:hover {
