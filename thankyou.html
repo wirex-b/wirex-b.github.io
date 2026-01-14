@@ -8,54 +8,133 @@
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
 
   <style>
-    body { margin: 0; font-family: "Tajawal", sans-serif; background: #f4f6f8; }
-    .thankyou-wrapper { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+    body {
+      margin: 0;
+      font-family: "Tajawal", sans-serif;
+      background: #f4f6f8;
+    }
+
+    .thankyou-wrapper {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
     .thankyou-card {
-      width: 100%; max-width: 440px; background: #ffffff; border-radius: 22px;
-      padding: 32px 24px 36px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08); text-align: center;
+      width: 100%;
+      max-width: 440px;
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 32px 24px 36px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+      text-align: center;
     }
-    .thankyou-card h2 { font-size: 26px; margin-bottom: 10px; color: #0F4C75; }
-    .client-name { font-size: 18px; font-weight: 700; color: #333; margin-bottom: 14px; }
+
+    .thankyou-card h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      color: #0F4C75;
+    }
+
+    .client-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 14px;
+    }
+
     .status {
-      background: #EAF4FB; color: #0F4C75; font-size: 15px; padding: 12px 18px;
-      border-radius: 14px; margin-bottom: 18px; font-weight: 600;
+      background: #EAF4FB;
+      color: #0F4C75;
+      font-size: 15px;
+      padding: 12px 18px;
+      border-radius: 14px;
+      margin-bottom: 18px;
+      font-weight: 600;
     }
-    .thankyou-card p { font-size: 15px; line-height: 1.9; color: #555; margin-bottom: 28px; }
-    .btn-wrap { display: flex; justify-content: center; }
+
+    .thankyou-card p {
+      font-size: 15px;
+      line-height: 1.9;
+      color: #555;
+      margin-bottom: 28px;
+    }
+
+    /* حاوية الزر */
+    .btn-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* زر العودة */
     .btn-back {
-      display: flex; align-items: center; justify-content: center;
-      width: 100%; max-width: 360px; padding: 18px;
-      font-size: 17px; font-weight: 700;
-      background: #2A7DB6; color: #ffffff;
-      border-radius: 18px; text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      max-width: 360px;
+      padding: 18px;
+
+      font-size: 17px;
+      font-weight: 700;
+
+      background: #2A7DB6; /* أزرق أهدأ */
+      color: #ffffff;
+
+      border-radius: 18px;
+      text-decoration: none;
+
       box-shadow: 0 8px 20px rgba(42, 125, 182, 0.25);
       transition: all 0.2s ease;
     }
-    .btn-back:hover { background: #236a9b; transform: translateY(-1px); }
-    .auto-note { margin-top: 22px; font-size: 13px; color: #777; }
+
+    .btn-back:hover {
+      background: #236a9b;
+      transform: translateY(-1px);
+    }
+
+    /* ملاحظة التحويل */
+    .auto-note {
+      margin-top: 22px;
+      font-size: 13px;
+      color: #777;
+    }
   </style>
 </head>
 
 <body>
+
   <div class="thankyou-wrapper">
     <div class="thankyou-card">
+
       <h2>✨ شكرًا لك</h2>
 
       <div class="client-name" id="clientName"></div>
 
-      <div class="status">تم تسجيل طلبك بنجاح في النظام</div>
+      <div class="status">
+        تم تسجيل طلبك بنجاح في النظام
+      </div>
 
       <p>
-        فريقنا سيقوم بمراجعة الطلب والتواصل معك في أقرب وقت ممكن.
+        فريقنا سيقوم بمراجعة الطلب والتواصل معك
+        في أقرب وقت ممكن.
         <br />
         وقت الرد المتوقع خلال 24 ساعة.
       </p>
 
       <div class="btn-wrap">
-        <a href="index.html" class="btn-back">العودة للصفحة الرئيسية</a>
+        <a href="index.html" class="btn-back">
+          العودة للصفحة الرئيسية
+        </a>
       </div>
 
-      <div class="auto-note">سيتم تحويلك تلقائيًا إلى واتساب خلال ثوانٍ…</div>
+      <div class="auto-note">
+        سيتم تحويلك تلقائيًا إلى واتساب خلال ثوانٍ…
+      </div>
+
     </div>
   </div>
 
@@ -63,63 +142,36 @@
     function cleanName(v) {
       if (!v) return "";
       v = String(v).trim();
-
-      // فك ترميز لو جا من رابط
-      try { v = decodeURIComponent(v); } catch(e) {}
-
-      // استبعاد قيم غلط/افتراضية
-      const bad = ["وتر", "selk", "سلك", "undefined", "null"];
-      if (bad.includes(v.toLowerCase()) || bad.includes(v)) return "";
-
-      // إزالة تكرار المسافات
+      try { v = decodeURIComponent(v); } catch (e) {}
       v = v.replace(/\s+/g, " ");
+
+      const bad = ["وتر", "selk", "سلك", "undefined", "null"];
+      const low = v.toLowerCase();
+      if (bad.includes(v) || bad.includes(low)) return "";
+
       return v;
     }
 
-    function getClientName() {
-      // 1) من الرابط ?name=
-      const p = new URLSearchParams(window.location.search);
-      const fromUrl =
-        p.get("name") || p.get("client") || p.get("clientName") || p.get("fullname");
+    const params = new URLSearchParams(window.location.search);
+    const fromUrl = params.get("name");
+    const fromStorage = localStorage.getItem("clientName");
 
-      // 2) من sessionStorage (أفضل لأنه مؤقت)
-      const fromSession =
-        sessionStorage.getItem("clientName") ||
-        sessionStorage.getItem("name") ||
-        sessionStorage.getItem("fullname");
+    const name = cleanName(fromUrl) || cleanName(fromStorage);
 
-      // 3) من localStorage (احتياطي)
-      const fromLocal =
-        localStorage.getItem("clientName") ||
-        localStorage.getItem("name") ||
-        localStorage.getItem("fullname") ||
-        localStorage.getItem("customerName");
-
-      return cleanName(fromUrl) || cleanName(fromSession) || cleanName(fromLocal);
-    }
-
-    const name = getClientName();
     const el = document.getElementById("clientName");
-
     if (name) {
       el.textContent = name + " 👋";
-      el.style.display = "block";
-      // امسح الاسم بعد العرض عشان ما يعلق لعميل ثاني
+      // تنظيف حتى لا يعلق على عميل ثاني
       localStorage.removeItem("clientName");
-      localStorage.removeItem("name");
-      localStorage.removeItem("fullname");
-      localStorage.removeItem("customerName");
-      sessionStorage.removeItem("clientName");
-      sessionStorage.removeItem("name");
-      sessionStorage.removeItem("fullname");
     } else {
-      // إذا ما فيه اسم، نخفي السطر بالكامل
       el.style.display = "none";
     }
 
+    /* تحويل تلقائي للواتساب بعد 5 ثواني */
     setTimeout(() => {
       window.location.href = "https://wa.me/966505781824";
     }, 5000);
   </script>
+
 </body>
 </html>
